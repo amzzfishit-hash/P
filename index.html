@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarkVerse UI</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background:radial-gradient(circle at top left,#3b145f,#0a0212 70%);
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .app{
+      width:100%;
+      max-width:420px;
+      min-height:100vh;
+      position:relative;
+      padding:20px;
+    }
+
+    /* Shared */
+    .hidden{
+      display:none;
+    }
+
+    .btn{
+      width:100%;
+      padding:14px;
+      border-radius:12px;
+      border:none;
+      cursor:pointer;
+      font-size:15px;
+      font-weight:600;
+      letter-spacing:1px;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#8f3bff,#c26bff);
+      color:white;
+      box-shadow:0 0 15px rgba(170,90,255,.5);
+    }
+
+    .btn-primary:hover{
+      opacity:.9;
+    }
+
+    .btn-outline{
+      background:transparent;
+      border:1px solid #8f3bff;
+      color:#caa6ff;
+    }
+
+    /* Page 1 */
+    #page1{
+      text-align:center;
+    }
+
+    .banner{
+      margin-top:50px;
+      background:linear-gradient(135deg,#2b0a44,#14021f);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 0 30px rgba(140,60,255,.3);
+    }
+
+    .banner video{
+      width:100%;
+      border-radius:15px;
+      object-fit:cover;
+    }
+
+    .title-box{
+      margin-top:-60px;
+      display:inline-block;
+      background:rgba(0,0,0,.6);
+      padding:12px 25px;
+      border-radius:25px;
+      font-family:'Orbitron',sans-serif;
+      font-size:22px;
+      letter-spacing:2px;
+      backdrop-filter:blur(8px);
+    }
+
+    .actions{
+      margin-top:40px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .footer{
+      position:absolute;
+      bottom:25px;
+      left:0;
+      right:0;
+      text-align:center;
+      font-size:12px;
+      opacity:.7;
+    }
+
+    /* Page 2 */
+    #page2{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .login-card{
+      width:100%;
+      background:rgba(20,5,35,.9);
+      border-radius:20px;
+      padding:30px 25px;
+      box-shadow:0 0 40px rgba(160,80,255,.4);
+      text-align:center;
+      backdrop-filter:blur(10px);
+    }
+
+    .avatar{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#8f3bff,#c26bff);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:-70px auto 15px;
+      box-shadow:0 0 20px rgba(170,90,255,.6);
+    }
+
+    .avatar img{
+      width:82px;
+      height:82px;
+      border-radius:50%;
+    }
+
+    .login-title{
+      font-family:'Orbitron',sans-serif;
+      font-size:26px;
+      letter-spacing:2px;
+      margin-bottom:5px;
+    }
+
+    .login-sub{
+      font-size:13px;
+      opacity:.7;
+      margin-bottom:25px;
+    }
+
+    .input-box{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(200,150,255,.2);
+      border-radius:12px;
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      margin-bottom:15px;
+    }
+
+    .input-box input{
+      flex:1;
+      background:transparent;
+      border:none;
+      outline:none;
+      color:white;
+      font-size:14px;
+      margin-left:8px;
+    }
+
+    .input-box i{
+      opacity:.7;
+      font-style:normal;
+    }
+
+    .login-btn{
+      margin-top:10px;
+    }
+
+  </style></head>
+<body>  <div class="app"><!-- PAGE 1 -->
+<div id="page1">
+
+  <div class="banner">
+    <video autoplay loop muted playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="title-box">DarkVerse</div>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="goLogin()">→ Login</button>
+    <button class="btn btn-outline">✦ Buy Access</button>
+  </div>
+
+  <div class="footer">
+    © 2025 DarkVerse - All Rights Reserved
+  </div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div id="page2" class="hidden">
+
+  <div class="login-card">
+
+    <div class="avatar">
+      <img src="https://i.ibb.co/2dJzjQ0/anime-purple.jpg" alt="avatar">
+    </div>
+
+    <div class="login-title">DarkVerse</div>
+    <div class="login-sub">Please Log-in</div>
+
+    <div class="input-box">
+      <i>👤</i>
+      <input type="text" placeholder="Username">
+    </div>
+
+    <div class="input-box">
+      <i>🔒</i>
+      <input type="password" placeholder="Password">
+    </div>
+
+    <button class="btn btn-primary login-btn">LOGIN</button>
+
+  </div>
+
+</div>
+
+  </div>  <script>
+    function goLogin(){
+      document.getElementById('page1').classList.add('hidden');
+      document.getElementById('page2').classList.remove('hidden');
+    }
+  </script></body>
+</html>
